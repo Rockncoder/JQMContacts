@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section data-role="page" id="home" data-dom-cache="true" data-rockncoder-jspage="home">
+	<header data-role="header" data-position="fixed">
+		<h1>Home</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-direction="reverse"  class="ui-btn-active ui-state-persist"  >Home</a></li>
+				<li><a href="#contacts">Contacts</a></li>
+				<li><a href="#addcontact" >Add Contact</a></li>
+			</ul>
+		</div>
+	</header>
+	<div data-role="content" align="center">
+		<h2>JQM Contacts</h2>
+	</div>
+</section>
+
+<section data-role="page" id="contacts" data-dom-cache="true" data-rockncoder-jspage="contacts">
+	<header data-role="header" data-position="fixed">
+		<h1>Contacts</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-direction="reverse" >Home</a></li>
+				<li><a href="#contacts" class="ui-btn-active ui-state-persist" >Contacts</a></li>
+				<li><a href="#addcontact" >Add Contact</a></li>
+			</ul>
+		</div>
+	</header>
+	<div data-role="content">
+		<ul id="contactlistview" data-role="listview">
+		</ul>
+	</div>
+</section>
+
+<section data-role="page" id="addcontact" data-dom-cache="true" data-rockncoder-jspage="addcontact" >
+	<header data-role="header" data-position="fixed">
+		<h1>Add Contact</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-direction="reverse" >Home</a></li>
+				<li><a href="#contacts" >Contacts</a></li>
+				<li><a href="#addcontact" class="ui-btn-active ui-state-persist">Add Contact</a></li>
+			</ul>
+		</div>
+	</header>
+	<div data-role="content">
+		<div data-role="fieldcontain">
+			<input type="text" id="firstNameAddContact" name="firstNameAddContact" class="inputdata" tabindex="1" placeholder="First Name"/>
+			<input type="text" id="lastNameAddContact" name="lastNameAddContact" class="inputdata" tabindex="2"  placeholder="Last Name"/>
+			<input type="tel" id="telephoneAddContact" name="phoneAddContact" class="inputdata" tabindex="3"  placeholder="Telephone"/>
+			<input type="email" id="emailAddContact" name="emailAddContact" class="inputdata" tabindex="4"  placeholder="E-mail"/>
+		</div>
+		<div data-role="controlgroup" data-type="horizontal" align = "center">
+			<button id="cancelAddContact" data-inline="true">Cancel</button>
+			<button id="saveAddContact" data-inline="true" data-theme="b">Save</button>
+		</div>
+	</div>
+</section>
+
+<section data-role="page" id="editcontact" data-dom-cache="true" data-rockncoder-jspage="editcontact">
+	<header data-role="header" data-position="fixed">
+		<h1>Edit Contact</h1>
+		<div data-role="controlgroup" data-type="horizontal" align = "center">
+			<button id="cancelEditContact" data-inline="true">cancel</button>
+			<button id="updateEditContact" data-inline="true" data-theme="b">update</button>
+			<button id="deleteEditContact" data-inline="true" data-theme="e">del</button>
+		</div>
+	</header>
+	<div data-role="content">
+		<div id="edits" ></div>
+	</div>
+</section>

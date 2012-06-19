@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link href="/Content/jquery.mobile-1.1.0.min.css" rel="stylesheet" type="text/css" />
+	<script src="/Scripts/Libraries/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="/Scripts/Libraries/jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
+	<script type="text/template" id="contactlistview-template">
+		<% _.each(Contacts, function(Contact) { %>
+			<li class='Contact' id='contact<%= Contact.id %>'>
+				<h3><%= Contact.firstName %>&nbsp;<%= Contact.lastName %></h3>
+				<p><%= Contact.telephone %></p>
+				<p><%= Contact.email %></p>
+			</li>
+		<% });%>
+	</script>
+	<script type="text/template" id="edit-template">
+		<div data-role="fieldcontain">
+			<label for="firstNameAddContact">First Name</label>
+			<input type="text" id="firstNameAddContact" name="firstNameAddContact" class="inputdata" tabindex="1" value="<%= Contact.firstName %>"/>
+			<label for="lastNameAddContact">Last Name</label>
+			<input type="text" id="lastNameAddContact" name="lastNameAddContact" class="inputdata" tabindex="2" value="<%= Contact.lastName %>" />
+			<label for="telephoneAddContact">Telephone</label>
+			<input type="tel" id="telephoneAddContact" name="phoneAddContact" class="inputdata" tabindex="3" value="<%= Contact.telephone %>" />
+			<label for="emailAddContact">E-mail</label>
+			<input type="email" id="emailAddContact" name="emailAddContact" class="inputdata" tabindex="4" value="<%= Contact.email %>" />
+		</div>
+	</script>
+</head>
+	<body>
+		@RenderBody()
+	</body>
+	<script src="/Scripts/Libraries/underscore-min.js" type="text/javascript"></script>
+	<script src="/Scripts/Libraries/backbone-min.js" type="text/javascript"></script>
+	<script src="/Scripts/application.js" type="text/javascript"></script>
+	<script src="/Scripts/models.js" type="text/javascript"></script>
+	<script src="/Scripts/collections.js" type="text/javascript"></script>
+	<script src="/Scripts/views.js" type="text/javascript"></script>
+	<script src="/Scripts/pages.js" type="text/javascript"></script>
+	<script src="/Scripts/hideAddressBar.js" type="text/javascript"></script>
+</html>
